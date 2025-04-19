@@ -10,7 +10,7 @@ app = Flask(__name__, static_folder='./static', static_url_path='/static') # Cha
 print(f"Current working directory: {os.getcwd()}") # Keep this for now
 CORS(app)
 
-# ... rest of your app.py code ...
+
 
 UPLOAD_FOLDER = 'uploads'
 EXTRACTED_AUDIO_FOLDER = 'extracted_audio'
@@ -28,15 +28,26 @@ def index():
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
+    print("Received /upload request")  # Add this line
     if 'video' not in request.files:
+        print("No 'video' file in request") # Add this line
         return jsonify({'error': 'No file part'}), 400
     file = request.files['video']
+    print(f"Received file: {file.filename}") # Add this line
     if file.filename == '':
+        print("No selected file") # Add this line
         return jsonify({'error': 'No selected file'}), 400
     if file and allowed_file(file.filename):
         filename = os.path.join(UPLOAD_FOLDER, file.filename)
-        file.save(filename)
-        return jsonify({'filename': file.filename})
+        print(f"Saving file to: {filename}") # Add this line
+        try:
+            file.save(filename)
+            print(f"File saved successfully: {file.filename}") # Add this line
+            return jsonify({'filename': file.filename})
+        except Exception as e:
+            print(f"Error saving file: {e}") # Add this line
+            return jsonify({'error': f"Error saving file: {str(e)}"}), 500
+    print("Invalid file type") # Add this line
     return jsonify({'error': 'Invalid file type'}), 400
 
 @app.route('/extract_audio', methods=['POST'])
