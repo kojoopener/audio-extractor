@@ -1,0 +1,316 @@
+body {
+    font-family: sans-serif;
+    margin: 0; /* Reset default body margin */
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #fff;
+    padding: 20px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-container {
+    max-width: 960px; /* Same as container for alignment */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li:first-child {
+    margin-left: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-actions a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+    font-size: 1em;
+}
+
+.navbar-actions .notification {
+    color: #777;
+    font-size: 1.1em;
+}
+
+.navbar-actions .log-in {
+    /* Add specific styling if needed */
+}
+
+.navbar-actions .get-started {
+    margin-left: 20px;
+    padding: 10px 18px;
+    font-size: 1em;
+}
+
+/* Hero Section Styles (within the container, based on the image) */
+.container {
+    max-width: 960px; /* Adjust as needed */
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    text-align: left; /* Adjust if needed */
+    color: #333;
+    margin-bottom: 10px; /* Reduced margin */
+    font-size: 2.5em; /* Adjust size */
+}
+
+.hero-subtitle {
+    color: #777;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px; /* Adjust margin */
+}
+
+/* Main Content (Upload and Options) */
+.main-content {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-direction: column; /* Stack the left column and options for now */
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.upload-section {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 20px; /* Reduced padding */
+    text-align: center;
+    color: #777;
+}
+
+.drag-drop-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.upload-icon {
+    font-size: 2.5em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.url-option {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+#video-url {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.video-player-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#video-player {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.options-section {
+    padding: 20px;
+}
+
+.options-section h2 {
+    text-align: left;
+    margin-top: 0;
+    color: #555;
+    margin-bottom: 5px;
+    font-size: 1.5em; /* Adjust size */
+}
+
+.options-section p {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.audio-format select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.trim-section .time-inputs {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.trim-section label {
+    font-weight: bold;
+    color: #555;
+}
+
+.trim-section input[type="number"] {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.primary-button {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    display: inline-flex; /* Changed to inline-flex for icon alignment */
+    align-items: center;
+    justify-content: center;
+}
+
+.primary-button svg {
+    margin-left: 8px; /* Space for the arrow icon */
+}
+
+.primary-button:hover {
+    background-color: #5650d3;
+}
+
+/* Timeline Section */
+.timeline-section {
+    margin-top: 30px;
+    padding: 10px 0;
+}
+
+.time-labels-top {
+    display: flex;
+    justify-content: space-between;
+    color: #777;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+#timeline-container {
+    position: relative;
+    background-color: #eee;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+#timeline {
+    background-color: #6c63ff;
+    height: 100%;
+    width: 0%;
+    border-radius: 5px;
+}
+
+#range-selector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(108, 99, 255, 0.7); /* More opaque blue */
+    border: 1px solid #6c63ff;
+    cursor: grab;
+    display: none;
+    opacity: 0.8; /* Add a bit of transparency for visual effect */
+    display: flex; /* Use flex to position handles */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px; /* Add some padding to make handles visible */
+    box-sizing: border-box; /* Ensure padding doesn't increase overall width */
+}
+
+#left-handle, #right-handle {
+    background-color: #f0f0f0;
+    width: 8px;
+    height: 100%;
+    cursor: ew-resize;
+}
+
+.time-labels {
+    display: flex;
+    justify-content: space-between;
+    color: #777;
+    font-size: 0.8em;
+}
+
+/* Download Section */
+.download-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#download-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #5cb85c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+#download-link:hover {
+    background-color: #4cae4c;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xtract - Free Online Audio Extractor from Video</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">Xtract</a>
+            <ul class="nav-links">
+                <li><a href="#">Create <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="font-size: 0.8em; margin-left: 5px;"><path fill="currentColor" d="M207 383l134-134c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L224 307 117.9 201.1c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9l134 134c9.4 9.4 24.6 9.4 33.9 0z"></path></svg></a></li>
+                <li><a href="#">Templates <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="font-size: 0.8em; margin-left: 5px;"><path fill="currentColor" d="M207 383l134-134c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L224 307 117.9 201.1c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9l134 134c9.4 9.4 24.6 9.4 33.9 0z"></path></svg></a></li>
+                <li><a href="#">Features <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="font-size: 0.8em; margin-left: 5px;"><path fill="currentColor" d="M207 383l134-134c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L224 307 117.9 201.1c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9l134 134c9.4 9.4 24.6 9.4 33.9 0z"></path></svg></a></li>
+                <li><a href="#">Resources <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="font-size: 0.8em; margin-left: 5px;"><path fill="currentColor" d="M207 383l134-134c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L224 307 117.9 201.1c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9l134 134c9.4 9.4 24.6 9.4 33.9 0z"></path></svg></a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <a href="#" class="log-in">Log in</a>
+                <a href="#" class="get-started primary-button">Get started</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Extract audio from video for free</h1>
+        <p class="hero-subtitle">Extract audio from video and get a MP3 or WAV audio file from your video using this free tool from Biteable</p>
+
+        <div class="main-content">
+            <div class="left-column">
+                <div class="upload-section">
+                    <div class="drag-drop-area">
+                        <div class="upload-icon">↑</div>
+                        <p>Drag and drop video or</p>
+                        <button id="upload-button">Upload video</button>
+                        <input type="file" id="video-upload" accept="video/*" style="display: none;">
+                    </div>
+                    <p class="url-option">Or enter direct video URL (.mp4, .webm, etc.):</p>
+                    <input type="text" id="video-url" placeholder="e.g., https://example.com/video.mp4">
+                </div>
+
+                <div class="video-player-section">
+                    <h2>Video Preview</h2>
+                    <video id="video-player" width="400" controls></video>
+                </div>
+            </div>
+
+            <div class="options-section">
+                <div class="audio-format">
+                    <h2>Audio format</h2>
+                    <p>Choose what type of file you want.</p>
+                    <select id="output-format">
+                        <option value="mp3">MP3</option>
+                        <option value="wav">WAV</option>
+                        <option value="aac">AAC</option>
+                        <option value="wma">WMA</option>
+                        <option value="flac">FLAC</option>
+                        <option value="aiff">AIFF</option>
+                        <option value="m4a">M4A</option>
+                    </select>
+                </div>
+
+                <div class="trim-section">
+                    <h2>Trim</h2>
+                    <p>Choose the part of your video to extract the audio from.</p>
+                    <div class="time-inputs">
+                        <label for="start-time">Start at</label>
+                        <input type="number" id="start-time" value="0.0" step="0.1"> s
+                        <label for="end-time">End at</label>
+                        <input type="number" id="end-time" value="60.0" step="0.1"> s
+                    </div>
+                </div>
+
+                <button type="button" id="extract-button" class="primary-button">
+                    Extract audio
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="margin-left: 8px; font-size: 0.9em;"><path fill="currentColor" d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4-24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25.1.4-34.3L311.4 276c-22.8-7.1-44.9-15.8-64.2-26.5L190.9 101.3c-9.8-9.1-10-24.7-.4-34.4z"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="timeline-section">
+            <div class="time-labels-top">
+                <span id="start-time-display">0.0 s</span>
+                <span id="end-time-display">60.0 s</span>
+            </div>
+            <div id="timeline-container">
+                <div id="timeline"></div>
+                <div id="range-selector">
+                    <div id="left-handle"></div>
+                    <div id="right-handle"></div>
+                </div>
+            </div>
+            <div class="time-labels" id="dynamic-time-labels">
+            </div>
+        </div>
+
+        <div class="download-section" style="display: none;">
+            <h2>Download Audio</h2>
+            <a id="download-link" href="#">Download Extracted Audio</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
