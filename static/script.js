@@ -109,7 +109,7 @@ function extractAudioFromURL(url) {
         extractButton.disabled = false;
         console.log('Audio extraction from URL successful:', audioData);
         if (audioData && audioData.output_filename) {
-            const downloadUrl = `http://127.0.0.1:5000/download/${audioData.output_filename}`;
+            const downloadUrl = `/download/${audioData.output_filename}`; // Changed to relative URL
             downloadLink.href = downloadUrl;
             downloadLink.download = audioData.output_filename;
             downloadSection.style.display = 'block';
@@ -362,9 +362,9 @@ extractButton.addEventListener('click', () => {
             .then(audioData => {
                 console.log('Audio extraction successful (file):', audioData);
                 if (audioData && audioData.output_filename) {
-                    const downloadUrl = `http://127.0.0.1:5000/download/${audioData.output_filename}`;
+                    const downloadUrl = `/download/${audioData.output_filename}`; // Changed to relative URL
                     downloadLink.href = downloadUrl;
-                    downloadLink.download = audioData.output_filename; // Suggest a filename
+                    downloadLink.download = audioData.output_filename;
                     downloadSection.style.display = 'block';
                 } else if (audioData && audioData.error) {
                     alert(`Error extracting audio: ${audioData.error}`);
