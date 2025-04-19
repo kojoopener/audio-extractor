@@ -6,9 +6,11 @@ import yt_dlp
 import json  # Import the json module
 
 #app = Flask(__name__)
-app = Flask(__name__, static_folder='../static', static_url_path='/static') # Adjust path if needed
-print(f"Current working directory: {os.getcwd()}") # Add this line
+app = Flask(__name__, static_folder='./static', static_url_path='/static') # Changed static_folder
+print(f"Current working directory: {os.getcwd()}") # Keep this for now
 CORS(app)
+
+# ... rest of your app.py code ...
 
 UPLOAD_FOLDER = 'uploads'
 EXTRACTED_AUDIO_FOLDER = 'extracted_audio'
