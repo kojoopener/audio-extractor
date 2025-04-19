@@ -7,6 +7,7 @@ import json  # Import the json module
 
 #app = Flask(__name__)
 app = Flask(__name__, static_folder='../static', static_url_path='/static') # Adjust path if needed
+print(f"Current working directory: {os.getcwd()}") # Add this line
 CORS(app)
 
 UPLOAD_FOLDER = 'uploads'
