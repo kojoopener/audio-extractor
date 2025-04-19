@@ -19,6 +19,10 @@ os.makedirs(EXTRACTED_AUDIO_FOLDER, exist_ok=True)
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+@app.route('/')
+def index():
+    return send_from_directory(app.static_folder, 'index.html')
+
 @app.route('/upload', methods=['POST'])
 def upload_file():
     if 'video' not in request.files:
