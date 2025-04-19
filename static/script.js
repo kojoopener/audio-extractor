@@ -200,7 +200,7 @@ function uploadVideoToServer() {
         const formData = new FormData();
         formData.append('video', uploadedVideoFile); // 'video' is the field name our Flask app expects
 
-        return fetch('http://127.0.0.1:5000/upload', {
+        return fetch('/upload', { // Changed the URL to be relative
             method: 'POST',
             body: formData,
         })
@@ -220,7 +220,7 @@ function extractAudioFromServer(extractionDetails) {
     downloadSection.style.display = 'none';
 
     console.log('About to fetch /extract_audio with:', extractionDetails);
-    return fetch('http://127.0.0.1:5000/extract_audio', {
+    return fetch('/extract_from_url', { // Changed the URL to be relative
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
