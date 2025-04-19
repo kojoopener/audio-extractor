@@ -212,6 +212,7 @@ function uploadVideoToServer() {
 }
 
 // Function to send extraction details to the server (for uploaded files)
+// Function to send extraction details to the server (for uploaded files)
 function extractAudioFromServer(extractionDetails) {
     if (isExtracting) return;
     isExtracting = true;
@@ -220,7 +221,7 @@ function extractAudioFromServer(extractionDetails) {
     downloadSection.style.display = 'none';
 
     console.log('About to fetch /extract_audio with:', extractionDetails);
-    return fetch('/extract_from_url', { // Changed the URL to be relative
+    return fetch('/extract_audio', { // <---- CORRECTED URL
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
